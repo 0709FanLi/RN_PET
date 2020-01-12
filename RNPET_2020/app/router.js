@@ -33,7 +33,7 @@ HomeNavigator.navigationOptions = ({ navigation }) => {
 
 const MainNavigator = createStackNavigator(
   {
-    HomeNavigator: { screen: Login },
+    HomeNavigator: { screen: HomeNavigator },
     Detail: { screen: Detail },
   },
   {
