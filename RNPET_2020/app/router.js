@@ -3,7 +3,7 @@ import { BackHandler, Animated, Easing } from 'react-native'
 import {
   NavigationActions,
 } from 'react-navigation'
-import {createBottomTabNavigator} from 'react-navigation-tabs'
+import { createBottomTabNavigator } from 'react-navigation-tabs'
 import {createStackNavigator} from 'react-navigation-stack'
 import {
   reduxifyNavigator,
@@ -33,7 +33,7 @@ HomeNavigator.navigationOptions = ({ navigation }) => {
 
 const MainNavigator = createStackNavigator(
   {
-    HomeNavigator: { screen: HomeNavigator },
+    HomeNavigator: { screen: Login },
     Detail: { screen: Detail },
   },
   {
@@ -48,7 +48,7 @@ const AppNavigator = createStackNavigator(
   },
   {
     headerMode: 'none',
-    mode: 'modal',
+    mode: 'card',
     navigationOptions: {
       gesturesEnabled: false,
     },

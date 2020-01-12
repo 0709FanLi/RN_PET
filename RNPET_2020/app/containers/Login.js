@@ -6,14 +6,15 @@ import { Button, Touchable } from '../components'
 
 import { createAction, NavigationActions } from '../utils'
 
-@connect(({ app }) => ({ ...app }))
+@connect(({ Login }) => ({ ...Login }))
 class Login extends Component {
   static navigationOptions = {
     title: 'Login',
   }
 
   onLogin = () => {
-    this.props.dispatch(createAction('app/login')())
+    console.log(12312312)
+    this.props.dispatch(createAction('Login/login')())
   }
 
   onClose = () => {
@@ -21,6 +22,7 @@ class Login extends Component {
   }
 
   render() {
+    console.log(this.props)
     const { fetching } = this.props
     return (
       <View style={styles.container}>
