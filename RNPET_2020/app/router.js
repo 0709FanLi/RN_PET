@@ -15,10 +15,12 @@ import { connect } from 'react-redux'
 import Loading from './containers/Loading'
 import Login from './containers/Login'
 import Home from './containers/Home'
+import MapPage from './containers/MapPage'
 import Account from './containers/Account'
 import Detail from './containers/Detail'
 
 const HomeNavigator = createBottomTabNavigator({
+  map: { screen: MapPage },
   Home: { screen: Home },
   Account: { screen: Account },
 })
@@ -30,7 +32,6 @@ HomeNavigator.navigationOptions = ({ navigation }) => {
     headerTitle: routeName,
   }
 }
-
 const MainNavigator = createStackNavigator(
   {
     HomeNavigator: { screen: HomeNavigator },

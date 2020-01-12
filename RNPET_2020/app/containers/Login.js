@@ -22,7 +22,6 @@ class Login extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { fetching } = this.props
     return (
       <View style={styles.container}>
