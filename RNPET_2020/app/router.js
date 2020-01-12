@@ -20,10 +20,16 @@ import Account from './containers/Account'
 import Detail from './containers/Detail'
 
 const HomeNavigator = createBottomTabNavigator({
-  map: { screen: MapPage },
-  Home: { screen: Home },
-  Account: { screen: Account },
-})
+    Home: { screen: Home },
+    MapPage: { screen: MapPage },
+    Account: { screen: Account },
+  },{
+    initialRouteName:'MapPage',
+    tabBarOptions:{
+      activeTintColor:'#69f'
+    }
+  }
+)
 
 HomeNavigator.navigationOptions = ({ navigation }) => {
   const { routeName } = navigation.state.routes[navigation.state.index]
